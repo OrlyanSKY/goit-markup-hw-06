@@ -76,39 +76,45 @@
                                 <use href="./images/symbol-defs.svg#icon-close-cross"></use>
                             </svg>
                         </button>
-                        <p class="modal-text">Оставьте свои данные, мы вам перезвоним</p>
+                        <b class="modal-text">Оставьте свои данные, мы вам перезвоним</b>
                         <form class="modal-form">
-                            <label for="name">Имя</label>
-                            <input type="text" name="name" id="name" />
+                            <div class="form-field">
+                                <label for="name" class="form-label">Имя</label>
+                                <input type="text" name="name" id="name" class="form-input" />
+                            </div>
+                            <div class="form-field">
+                                <label for="tel" class="form-label">Телефон</label>
+                                <input type="tel" name="phone" id="tel" class="form-input" />
+                            </div>
+                            <div class="form-field">
+                                <label for="mail" class="form-label">Почта</label>
+                                <input type="email" name="mail" id="mail" class="form-input" />
+                            </div>
 
-                            <br />
+                            <div class="form-field">
+                                <label for="area" class="form-label">Комментарий</label>
+                                <textarea
+                                    class="form-textarea"
+                                    name="comment"
+                                    id="area"
+                                    placeholder="Введите текст"
+                                ></textarea>
+                            </div>
 
-                            <label for="tel">Телефон</label>
-                            <input type="tel" name="phone" id="tel" />
+                            <div class="form-checkbox">
+                                <input
+                                    type="checkbox"
+                                    name="accept"
+                                    id="check"
+                                    class="checkbox-input"
+                                />
+                                <label for="check" class="checkbox-lable"
+                                    >Соглашаюсь с рассылкой и принимаю
+                                    <a href="" class="checkbox-lable-link">Условия договора</a>
+                                </label>
+                            </div>
 
-                            <br />
-
-                            <label for="mail">Почта</label>
-                            <input type="email" name="mail" id="mail" />
-
-                            <br />
-
-                            <label for="area">Комментарий</label>
-                            <textarea
-                                class="form-textarea"
-                                name="comment"
-                                id="area"
-                                rows="10"
-                            ></textarea>
-
-                            <br />
-
-                            <input type="checkbox" name="accept" id="check" />
-                            <label for="check"
-                                >Соглашаюсь с рассылкой и принимаю <a href="">Условия договора</a>
-                            </label>
-                            <br />
-                            <button type="submit">Отправить</button>
+                            <button type="submit" class="form-btn">Отправить</button>
                         </form>
                     </div>
                 </div>
@@ -557,7 +563,12 @@
                     <p class="form-title">Подпишитесь на рассылку</p>
                     <div class="form-thumb">
                         <form class="join-form">
-                            <input type="email" name="mail" placeholder="E-mail" />
+                            <input
+                                type="email"
+                                name="mail"
+                                placeholder="E-mail"
+                                class="join-form-input"
+                            />
                         </form>
 
                         <button type="submit" class="form-btn">Подписаться</button>
